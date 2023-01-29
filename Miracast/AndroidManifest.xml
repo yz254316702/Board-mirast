@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.example.myapplication"
+    coreApp="true"
+    android:sharedUserId="android.uid.system">
+
+    <uses-sdk android:targetSdkVersion="25" android:minSdkVersion="21"/>
+
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"/>
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE"/>
+    <uses-permission android:name="android.permission.INTERNET"/>
+
+    <uses-permission android:name="android.permission.MODIFY_AUDIO_SETTINGS"/>
+    <uses-permission android:name="android.permission.ACCESS_SURFACE_FLINGER"/>
+    <uses-permission android:name="android.permission.CONFIGURE_WIFI_DISPLAY"/>
+    <uses-permission android:name="android.permission.CONTROL_WIFI_DISPLAY"/>
+    <uses-permission android:required="true" android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:required="true" android:name="android.permission.ACCESS_WIFI_STATE"/>
+    <uses-permission android:required="true" android:name="android.permission.CHANGE_WIFI_STATE"/>
+    <uses-permission android:required="true" android:name="android.permission.CHANGE_NETWORK_STATE" />
+    <uses-permission android:required="true" android:name="android.permission.INTERNET"/>
+    <uses-feature  android:name="android.hardware.wifi" />
+    <uses-permission android:required="true" android:name="android.hardware.wifi" />
+    <uses-permission android:required="true" android:name="android.permission.READ_EXTERNAL_STORAGE"/>
+    <uses-permission android:required="true" android:name="android.permission.READ_LOGS"/>
+    <uses-permission android:required="true" android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:required="true" android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:required="true" android:name="android.permission.CLEAR_APP_USER_DATA" />
+    <uses-permission android:required="true" android:name="android.Manifest.permission.NETWORK_SETTINGS" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+        <activity
+            android:name=".MainActivity"
+            android:label="@string/app_name"
+            android:theme="@style/AppTheme.NoActionBar">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".MyWFDPlayer"
+            android:launchMode="singleInstance"
+            android:theme="@style/AppTheme.NoActionBar">
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+                <category android:name="android.intent.category.DEFAULT"/>
+            </intent-filter>
+        </activity>
+    </application>
+
+</manifest>
